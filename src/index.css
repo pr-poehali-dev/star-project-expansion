@@ -49,8 +49,8 @@
     --popover: 220 20% 8%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 43 74% 49%;
-    --primary-foreground: 220 20% 6%;
+    --primary: 151 55% 42%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 220 15% 15%;
     --secondary-foreground: 0 0% 95%;
@@ -58,19 +58,19 @@
     --muted: 220 15% 15%;
     --muted-foreground: 220 9% 65%;
 
-    --accent: 220 15% 15%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 151 55% 42%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 95%;
 
     --border: 220 15% 18%;
     --input: 220 15% 18%;
-    --ring: 43 74% 49%;
+    --ring: 151 55% 42%;
 
-    --gold: 43 74% 49%;
-    --gold-light: 43 80% 60%;
-    --gold-dark: 43 70% 35%;
+    --gold: 151 55% 42%;
+    --gold-light: 151 60% 55%;
+    --gold-dark: 151 50% 30%;
   }
 }
 
@@ -83,13 +83,23 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, hsl(43, 80%, 60%) 0%, hsl(43, 74%, 49%) 50%, hsl(43, 70%, 35%) 100%);
+  background: linear-gradient(
+    135deg,
+    hsl(151, 60%, 55%) 0%,
+    hsl(151, 55%, 42%) 50%,
+    hsl(151, 50%, 30%) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
