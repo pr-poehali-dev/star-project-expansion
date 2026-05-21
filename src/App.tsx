@@ -176,6 +176,80 @@ function App() {
         </div>
       </section>
 
+      {/* Digital Safety Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <ArtDecoDivider variant="stepped" />
+
+          <div className="text-center mb-16">
+            <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Твой цифровой иммунитет</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance">Советы по цифровой безопасности</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                icon: "🔒",
+                title: "Пароль — это замок",
+                tips: [
+                  "Используй разные пароли для каждого сайта",
+                  "Минимум 12 символов: буквы, цифры, знаки",
+                  "Включи двухфакторную аутентификацию везде, где можно",
+                  "Не сохраняй пароли в браузере на чужом устройстве",
+                ],
+              },
+              {
+                icon: "👁",
+                title: "Настрой приватность",
+                tips: [
+                  "Посты и фото — только для друзей, не «все пользователи»",
+                  "Регулярно проверяй настройки конфиденциальности",
+                  "Не принимай запросы от незнакомых людей",
+                  "Отключи геолокацию в историях и постах",
+                ],
+              },
+              {
+                icon: "🤔",
+                title: "Подумай перед публикацией",
+                tips: [
+                  "Не публикуй номер телефона и домашний адрес",
+                  "Не выкладывай фото документов и билетов",
+                  "Не делись планами на отпуск заранее",
+                  "Удалённое из сети всё равно может остаться в чужих руках",
+                ],
+              },
+              {
+                icon: "👥",
+                title: "Фильтруй список друзей",
+                tips: [
+                  "Не добавляй незнакомых людей «для количества»",
+                  "За пустыми профилями часто скрываются хейтеры",
+                  "Периодически чисти список — убирай тех, кого не знаешь",
+                  "Если кто-то давит или угрожает — блокируй без колебаний",
+                ],
+              },
+            ].map((block, i) => (
+              <div key={i} className="relative p-8 border border-border hover:border-primary transition-colors duration-300">
+                <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-primary" />
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-primary" />
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-3xl">{block.icon}</span>
+                  <h3 className="font-serif text-xl text-foreground">{block.title}</h3>
+                </div>
+                <ul className="space-y-3">
+                  {block.tips.map((tip, j) => (
+                    <li key={j} className="flex items-start gap-3 text-muted-foreground text-sm leading-relaxed">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                      {tip}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Hotline Section */}
       <section className="py-24 px-6 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
